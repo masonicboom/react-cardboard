@@ -1,0 +1,23 @@
+{
+  "name": "react-cardboard",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "masonicboom",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-three": "^0.7.4",
+    "three": "^0.72.0"
+  },
+  "devDependencies": {
+    "tslint": "^3.0.0",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
