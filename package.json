@@ -12,7 +12,8 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-three": "^0.7.4",
-    "three": "^0.72.0"
+    "three": "^0.72.0",
+    "three-orbit-controls": "^72.0.0"
   },
   "devDependencies": {
     "tslint": "^3.0.0",
