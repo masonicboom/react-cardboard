@@ -4,8 +4,13 @@ import * as ReactDOM from "react-dom";
 let R3:any = require("react-three");
 import * as THREE from "three";
 let THREEOrbitControls:any = require("three-orbit-controls")(THREE);
+let StereoEffect:any = require("imports?THREE=>{}!exports?THREE.StereoEffect!../vendor/StereoEffect");
 
 class App extends React.Component<any, any> {
+	componentDidMount() {
+		console.log(StereoEffect);
+	}
+
 	render(): React.ReactElement<any> {
 		let w = 500;
 		let h = 500;

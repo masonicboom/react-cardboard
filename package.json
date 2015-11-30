@@ -9,6 +9,8 @@
   "author": "masonicboom",
   "license": "ISC",
   "dependencies": {
+    "exports-loader": "^0.6.2",
+    "imports-loader": "^0.6.5",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-three": "^0.7.4",
