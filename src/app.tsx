@@ -6,12 +6,20 @@ import * as THREE from "three";
 let THREEOrbitControls:any = require("three-orbit-controls")(THREE);
 
 // See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand what is going on here.
-let StereoEffect:any = require("imports?THREE=three!exports?THREE.StereoEffect!../vendor/StereoEffect");
+let THREEStereoEffect:any = require("imports?THREE=three!exports?THREE.StereoEffect!../bower_components/three.js/examples/js/effects/StereoEffect");
+
+// See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand what is going on here.
+let THREEVRControls:any = require("imports?THREE=three!exports?THREE.VRControls!../bower_components/three.js/examples/js/controls/VRControls");
+
+// TODO: see if there's a cleaner way to expose window.THREE to webvr-polyfill.
+window.THREE = THREE;
+require("webvr-polyfill");
+
 
 class App extends React.Component<any, any> {
 	render(): React.ReactElement<any> {
-		let w = 500;
-		let h = 500;
+		let w = document.body.clientWidth;
+		let h = document.body.clientHeight;
 		return (
 			<div>
 				<R3.Scene
@@ -19,7 +27,8 @@ class App extends React.Component<any, any> {
 					height={h}
 					camera="maincamera"
 					orbitControls={THREEOrbitControls}
-					effect={StereoEffect}
+					VRControls={THREEVRControls}
+					effect={THREEStereoEffect}
 				>
 					<R3.PerspectiveCamera
 						name="maincamera"

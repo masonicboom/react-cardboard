@@ -1,0 +1,21 @@
+{
+  "name": "react-cardboard",
+  "description": "",
+  "authors": [
+    "masonicboom"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "threejs#*"
+  }
+}

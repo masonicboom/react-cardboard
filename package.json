@@ -15,9 +15,11 @@
     "react-dom": "^0.14.3",
     "react-three": "^0.7.4",
     "three": "^0.72.0",
-    "three-orbit-controls": "^72.0.0"
+    "three-orbit-controls": "^72.0.0",
+    "webvr-polyfill": "github:borismus/webvr-polyfill#880121bf569d585f5aa484ec5e6f43cc588a734d"
   },
   "devDependencies": {
+    "bower": "^1.6.8",
     "tslint": "^3.0.0",
     "typescript": "^1.6.2",
     "webpack": "^1.12.9",
