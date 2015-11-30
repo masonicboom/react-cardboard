@@ -8,6 +8,10 @@ module.exports = {
 		filename: "app.js"
 	},
 	resolve: {
-		extensions: ["", ".js"]
+		extensions: ["", ".js"],
+		alias: {
+			react: path.resolve('./node_modules/react'),
+			three: path.resolve('./node_modules/three'),
+		},
 	}
 };
