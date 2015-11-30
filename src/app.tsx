@@ -4,13 +4,11 @@ import * as ReactDOM from "react-dom";
 let R3:any = require("react-three");
 import * as THREE from "three";
 let THREEOrbitControls:any = require("three-orbit-controls")(THREE);
-let StereoEffect:any = require("imports?THREE=>{}!exports?THREE.StereoEffect!../vendor/StereoEffect");
+
+// See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand what is going on here.
+let StereoEffect:any = require("imports?THREE=three!exports?THREE.StereoEffect!../vendor/StereoEffect");
 
 class App extends React.Component<any, any> {
-	componentDidMount() {
-		console.log(StereoEffect);
-	}
-
 	render(): React.ReactElement<any> {
 		let w = 500;
 		let h = 500;
@@ -21,6 +19,7 @@ class App extends React.Component<any, any> {
 					height={h}
 					camera="maincamera"
 					orbitControls={THREEOrbitControls}
+					effect={StereoEffect}
 				>
 					<R3.PerspectiveCamera
 						name="maincamera"
