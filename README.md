@@ -23,7 +23,7 @@ First, you'll need to have `npm` installed. It comes with [node](https://nodejs.
 		node_modules/.bin/webpack-dev-server --content-base www/ --watch built/app.js
 		open http://localhost:8080/
 
-To access the dev server from your phone, you may need to specify your computer's IP address in a "--host" parameter to webpack-dev-server.
+To access the dev server from your phone, you may need to specify your computer's IP address in a `--host` parameter to `webpack-dev-server`.
 
 ### Static building (deployment)
 
@@ -48,3 +48,5 @@ To access the dev server from your phone, you may need to specify your computer'
 1. Calibrate the rendering using Google Cardboard viewer QR codes.
 1. Expose a React component with a simple interface for rendering panoramas (like the one in the demo).
 1. Expose a React component with a simple interface for rendering a single object that you can orbit around (rather than pivoting the camera).
+
+Contributions are welcome. Send a PR.
