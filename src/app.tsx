@@ -5,12 +5,12 @@ let R3:any = require("react-three");
 import * as THREE from "three";
 let THREEOrbitControls:any = require("three-orbit-controls")(THREE);
 
-// See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand what is going on here.
+// Load up three.js plugins to display in stereo and control camera using device sensors.
+// See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand these require statements.
 let THREEStereoEffect:any = require("imports?THREE=three!exports?THREE.StereoEffect!../bower_components/three.js/examples/js/effects/StereoEffect");
-
-// See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand what is going on here.
 let THREEVRControls:any = require("imports?THREE=three!exports?THREE.VRControls!../bower_components/three.js/examples/js/controls/VRControls");
 
+// Load "polyfill" to make the VR controls work on iPhone.
 // TODO: see if there's a cleaner way to expose window.THREE to webvr-polyfill.
 window.THREE = THREE;
 require("webvr-polyfill");
@@ -18,37 +18,40 @@ require("webvr-polyfill");
 
 class App extends React.Component<any, any> {
 	render(): React.ReactElement<any> {
-		let w = document.body.clientWidth;
-		let h = document.body.clientHeight;
-		return (
-			<div>
-				<R3.Scene
-					width={w}
-					height={h}
-					camera="maincamera"
-					orbitControls={THREEOrbitControls}
-					VRControls={THREEVRControls}
-					effect={THREEStereoEffect}
-				>
-					<R3.PerspectiveCamera
-						name="maincamera"
-						fov={75}
-						aspect={w/h}
-						near={1}
-						far={5000}
-						position={new THREE.Vector3(0, 0, 600)}
-						lookat={new THREE.Vector3(0, 0, 0)}
-					/>
+		let w = window.innerWidth;
+		let h = window.innerHeight;
 
-					<R3.Mesh
-						geometry={new THREE.BoxGeometry(100, 100, 100)}
-						material={new THREE.MeshBasicMaterial({ color: 0x00ff00 })}
-						position={new THREE.Vector3(0, 0, 0)}
-						scale={new THREE.Vector3(1, 1, -1)}
-						quaternion={new THREE.Quaternion()}
-					/>
-				</R3.Scene>
-			</div>
+		let panoramaTexture = THREE.ImageUtils.loadTexture("PIA16440_McMurdo_Merged_Cyl_L456atc.jpg");
+		panoramaTexture.minFilter = THREE.NearestFilter;
+
+		return (
+			<R3.Scene
+				width={w}
+				height={h}
+				camera="maincamera"
+				orbitControls={THREEOrbitControls}
+				VRControls={THREEVRControls}
+				effect={THREEStereoEffect}
+			>
+				<R3.PerspectiveCamera
+					name="maincamera"
+					fov={75}
+					aspect={w/h}
+					near={1}
+					far={5000}
+					position={new THREE.Vector3(0, 0, 0)}
+					lookat={new THREE.Vector3(0, 0, 1)}
+				/>
+
+				<R3.Mesh
+					geometry={new THREE.CylinderGeometry(100, 100, 200, 128, 1, true)}
+					material={new THREE.MeshBasicMaterial({
+						map: panoramaTexture
+					})}
+					position={new THREE.Vector3(0, 0, 0)}
+					scale={new THREE.Vector3(-1, 1, 1)}
+				/>
+			</R3.Scene>
 		);
 	}
 }
