@@ -20,7 +20,7 @@ First, you'll need to have `npm` installed. It comes with [node](https://nodejs.
 		tsd install # Optional.
 		node_modules/.bin/bower install
 		node_modules/.bin/tsc
-		node_modules/.bin/webpack-dev-server --content-base www/ --watch built/app.js
+		node_modules/.bin/webpack-dev-server --content-base www/
 		open http://localhost:8080/
 
 To access the dev server from your phone, you may need to specify your computer's IP address in a `--host` parameter to `webpack-dev-server`.
