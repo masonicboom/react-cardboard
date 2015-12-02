@@ -2,3 +2,4 @@ node_modules/
 built/
 typings/
 bower_components/
+www/*/app.js
