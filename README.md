@@ -6,9 +6,16 @@ Currently, it renders a [panorama of Mars taken by NASA](http://mars.nasa.gov/me
 
 ![Image Alt](demo-screenshot.png)
 
+There's also a demo letting you view the famous [Utah teapot](https://en.wikipedia.org/wiki/Utah_teapot).
+
 ## Demo
 
-Live demo is at https://masonicboom.github.io/react-cardboard/. This will work in a desktop browser (tested in Chrome and Safari), but is best viewed in a Google Cardboard viewer (tested with iPhone 5s and [Mattel View-Master](http://www.view-master.com)).
+There are two demos:
+
+1. Panorama of mars, that you can look around by turning your head (in a Cardboard viewer): [View Demo](https://masonicboom.github.io/react-cardboard/panorama/).
+1. The Utah teapot, which you can rotate by turning your head (in a Cardboard viewer): [View Demo](https://masonicboom.github.io/react-cardboard/object/).
+
+These will work in a desktop browser (tested in Chrome and Safari), but are best viewed in a Google Cardboard viewer (tested with iPhone 5s and [Mattel View-Master](http://www.view-master.com)).
 
 ## Usage
 
