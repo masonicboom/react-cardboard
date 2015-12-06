@@ -4,15 +4,33 @@ import * as ReactDOM from "react-dom";
 let R3:any = require("react-three");
 import * as THREE from "three";
 import VRPanoramaViewer = require("./components/VRPanoramaViewer");
+import VRModeButton = require("./components/VRModeButton");
 
 class App extends React.Component<any, any> {
+	constructor(props) {
+		this.state = {
+			showPanorama: false,
+		};
+		super();
+	}
+
+	showPanorama() {
+		this.setState({
+			showPanorama: true,
+		});
+	}
+
 	render(): React.ReactElement<any> {
 		return (
-			<VRPanoramaViewer
-				radius={100}
-				height={200}
-				src="PIA16440_McMurdo_Merged_Cyl_L456atc.jpg"
-			/>
+			<VRModeButton
+				imageSrc="panorama-preview.jpg"
+			>
+				<VRPanoramaViewer
+					radius={100}
+					height={200}
+					src="PIA16440_McMurdo_Merged_Cyl_L456atc.jpg"
+				/>
+			</VRModeButton>
 		);
 	}
 }

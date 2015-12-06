@@ -3,6 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as THREE from "three";
 import VRObjectViewer = require("./components/VRObjectViewer");
+import VRModeButton = require("./components/VRModeButton");
 
 // See https://github.com/webpack/exports-loader and https://github.com/webpack/imports-loader to understand this require statements.
 let THREETeapotBufferGeometry:any = require("imports?THREE=three!exports?THREE.TeapotBufferGeometry!../bower_components/three.js/examples/js/geometries/TeapotBufferGeometry");
@@ -20,14 +21,18 @@ class App extends React.Component<any, any> {
 		let teapotGeometry = new THREETeapotBufferGeometry(teapotSize, newTess, bottom, lid, body, fitLid, nonblinn);
 
 		return (
-			<VRObjectViewer
-				geometry={teapotGeometry}
-				material={new THREE.MeshBasicMaterial({
-					color: 0x00ff00,
-					wireframe: true,
-				})}
-				scale={new THREE.Vector3(-1, 1, 1)}
-			/>
+			<VRModeButton
+				imageSrc="teapot-preview.png"
+			>
+				<VRObjectViewer
+					geometry={teapotGeometry}
+					material={new THREE.MeshBasicMaterial({
+						color: 0x00ff00,
+						wireframe: true,
+					})}
+					scale={new THREE.Vector3(-1, 1, 1)}
+				/>
+			</VRModeButton>
 		);
 	}
 }
