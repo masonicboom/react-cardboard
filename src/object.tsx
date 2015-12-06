@@ -20,7 +20,7 @@ class App extends React.Component<any, any> {
 		let nonblinn = false;
 		let teapotGeometry = new THREETeapotBufferGeometry(teapotSize, newTess, bottom, lid, body, fitLid, nonblinn);
 
-		return (
+		let button = (
 			<VRModeButton
 				imageSrc="teapot-preview.png"
 			>
@@ -30,9 +30,25 @@ class App extends React.Component<any, any> {
 						color: 0x00ff00,
 						wireframe: true,
 					})}
-					scale={new THREE.Vector3(-1, 1, 1)}
+					scale={new THREE.Vector3(-2, 2, 2)}
 				/>
 			</VRModeButton>
+		);
+
+		return (
+			<div>
+				<img src="ecommerce.jpg" />
+				<div
+					style={{
+						position: "absolute",
+						zIndex: 10,
+						left: 25,
+						top: 360,
+					}}
+				>
+					{button}
+				</div>
+			</div>
 		);
 	}
 }

@@ -6,6 +6,8 @@ interface VRModeButtonProps {
 	children?: React.ReactElement<any>;
 }
 
+const TOP_Z_INDEX = 100;
+
 class VRModeButton extends React.Component<VRModeButtonProps, any> {
 	constructor(props) {
 		this.state = {
@@ -22,7 +24,20 @@ class VRModeButton extends React.Component<VRModeButtonProps, any> {
 
 	render(): React.ReactElement<any> {
 		if (this.state.showPanorama) {
-			return this.props.children;
+			return (
+				<div
+					style={{
+						position: "fixed",
+						top: 0,
+						right: 0,
+						bottom: 0,
+						left: 0,
+						zIndex: TOP_Z_INDEX,
+					}}
+				>
+					{this.props.children}
+				</div>
+			);
 		} else {
 			return (
 				<div
@@ -41,20 +56,21 @@ class VRModeButton extends React.Component<VRModeButtonProps, any> {
 							left: 0,
 							right: 0,
 							bottom: 0,
-							zIndex: 100,
+							zIndex: TOP_Z_INDEX,
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-							color: "white",
-							fontSize: "2.4rem",
-							fontFamily: "monospace",
 							WebkitFilter: "drop-shadow(0 0 3px #000)",
-							opacity: 0.85,
 						}}
 					>
-						<img src="vr-expand-icon.svg" />
-						<div>Enter VR Mode</div>
+						<img
+							style={{
+								opacity: 0.8,
+								width: 120,
+							}}
+							src="vr-expand-icon.svg"
+						/>
 					</div>
 				</div>
 			);
