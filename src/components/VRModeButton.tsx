@@ -53,7 +53,7 @@ class VRModeButton extends React.Component<VRModeButtonProps, any> {
 							opacity: 0.85,
 						}}
 					>
-						<img src="/vr-expand-icon.svg" />
+						<img src="vr-expand-icon.svg" />
 						<div>Enter VR Mode</div>
 					</div>
 				</div>
