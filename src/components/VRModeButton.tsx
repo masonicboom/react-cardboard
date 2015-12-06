@@ -33,6 +33,7 @@ class VRModeButton extends React.Component<VRModeButtonProps, any> {
 						bottom: 0,
 						left: 0,
 						zIndex: TOP_Z_INDEX,
+						backgroundColor: "black",
 					}}
 				>
 					{this.props.children}

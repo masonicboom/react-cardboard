@@ -30,7 +30,7 @@ class App extends React.Component<any, any> {
 						color: 0x00ff00,
 						wireframe: true,
 					})}
-					scale={new THREE.Vector3(-2, 2, 2)}
+					scale={new THREE.Vector3(-1.25, 1.25, 1.25)}
 				/>
 			</VRModeButton>
 		);
