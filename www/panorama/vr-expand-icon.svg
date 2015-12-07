@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="314" height="242" viewBox="0, 0, 314, 242">
+  <g id="Layer_1" transform="translate(-239, -203)">
+    <path d="M473.5,288 C475.433,288 477,289.791 477,292 L477,356 C477,358.209 475.433,360 473.5,360 L411.5,360 C409.567,360 408,358.209 408,356 L408,340 C408,337.791 406.209,336 404,336 L388,336 C385.791,336 384,337.791 384,340 L384,356 C384,358.209 382.433,360 380.5,360 L318.5,360 C316.567,360 315,358.209 315,356 L315,292 C315,289.791 316.567,288 318.5,288 L473.5,288 z M348,312 C341.373,312 336,317.373 336,324 C336,330.627 341.373,336 348,336 C354.627,336 360,330.627 360,324 C360,317.373 354.627,312 348,312 z M444,312 C437.373,312 432,317.373 432,324 C432,330.627 437.373,336 444,336 C450.627,336 456,330.627 456,324 C456,317.373 450.627,312 444,312 z" fill="#FFFFFF"/>
+    <path d="M312,300 L300,276" fill="#000000"/>
+    <g>
+      <path d="M516,276 L480,240 L516,240 L516,276 z" fill="#FFFFFF"/>
+      <path d="M504.5,252.5 L492.5,264.5" fill-opacity="0" stroke="#FFFFFF" stroke-width="24"/>
+    </g>
+    <g>
+      <path d="M480,408 L516,372 L516,408 L480,408 z" fill="#FFFFFF"/>
+      <path d="M504.5,384.5 L492.5,396.5" fill-opacity="0" stroke="#FFFFFF" stroke-width="24"/>
+    </g>
+    <g>
+      <path d="M312,240 L276,276 L276,240 L312,240 z" fill="#FFFFFF"/>
+      <path d="M288.5,252.5 L300.5,264.5" fill-opacity="0" stroke="#FFFFFF" stroke-width="24"/>
+    </g>
+    <g>
+      <path d="M276,372 L312,408 L276,408 L276,372 z" fill="#FFFFFF"/>
+      <path d="M288.5,384.5 L300.5,396.5" fill-opacity="0" stroke="#FFFFFF" stroke-width="24"/>
+    </g>
+  </g>
+</svg>
