@@ -21,7 +21,7 @@ class App extends React.Component<any, any> {
 	}
 
 	render(): React.ReactElement<any> {
-		return (
+		let button = (
 			<VRModeButton
 				imageSrc="panorama-preview.jpg"
 			>
@@ -31,6 +31,22 @@ class App extends React.Component<any, any> {
 					src="PIA16440_McMurdo_Merged_Cyl_L456atc.jpg"
 				/>
 			</VRModeButton>
+		);
+
+		return (
+			<div>
+				<img src="vacation.jpg" />
+				<div
+					style={{
+						position: "absolute",
+						zIndex: 10,
+						left: 15,
+						top: 108,
+					}}
+				>
+					{button}
+				</div>
+			</div>
 		);
 	}
 }
