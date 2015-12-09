@@ -13,6 +13,7 @@
     "imports-loader": "^0.6.5",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-responsive": "^1.0.1",
     "react-three": "masonicboom/react-three#effects",
     "three": "^0.72.0",
     "three-orbit-controls": "^72.0.0",
